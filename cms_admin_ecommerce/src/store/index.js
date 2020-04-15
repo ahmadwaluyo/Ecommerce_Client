@@ -3,8 +3,8 @@ import Vuex from 'vuex'
 import axios from 'axios'
 
 Vue.use(Vuex)
-// const baseURL = 'https://ecommercehacktiv8.herokuapp.com'
-const baseURL = 'http://localhost:3000'
+const baseURL = 'https://ecommercehacktiv8.herokuapp.com'
+// const baseURL = 'http://localhost:3000'
 
 export default new Vuex.Store({
   state: {
