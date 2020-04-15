@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import SigninPage from '../views/SigninPage.vue'
+import LoginPage from '../views/LoginPage.vue'
 import DashboardPage from '../views/DashboardPage.vue'
 import AllProduct from '../components/AllProduct.vue'
 import AddForm from '../components/AddForm.vue'
@@ -11,8 +11,8 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'SigninPage',
-    component: SigninPage
+    name: 'LoginPage',
+    component: LoginPage
   },
   {
     path: '/dashboard',

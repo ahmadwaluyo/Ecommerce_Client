@@ -22,7 +22,7 @@
 <script>
 import Loading from '../components/Loading'
 export default {
-  name: 'SigninPage',
+  name: 'LoginPage',
   components: {
     Loading
   },

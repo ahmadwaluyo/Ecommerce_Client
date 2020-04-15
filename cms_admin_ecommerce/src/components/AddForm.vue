@@ -17,9 +17,12 @@
     <div class="form-group">
       <label for="product-category">Category</label>
       <select v-model="category" class="form-control" id="product-category">
-        <option disabled value="">Category</option>
-        <option>Men</option>
-        <option>Women</option>
+        <option disabled value="">Merk</option>
+        <option>Fujifilm</option>
+        <option>Canon</option>
+        <option>Nikon</option>
+        <option>Sony</option>
+        <option>Olympus</option>
       </select>
     </div>
     <div class="form-group">

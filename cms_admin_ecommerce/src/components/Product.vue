@@ -8,7 +8,7 @@
           <div class="card-body d-flex flex-column justify-content-center">
             <h5 class="card-title">{{ product.name }}</h5>
             <p class="card-text">Price: {{ product.price }}</p>
-            <p class="card-text">Category: {{ product.category }} <i v-if="product.category === 'Men'" class="fas fa-mars"></i> <i v-else-if="product.category === 'Women'" class="fas fa-venus"></i></p>
+            <p class="card-text">Category: {{ product.category }}
             <div class="d-flex">
               <p class="card-text mr-auto">Stock: {{ product.stock }}</p>
               <div class="d-flex">
