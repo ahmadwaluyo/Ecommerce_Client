@@ -59,7 +59,7 @@ export default {
 
 <style>
 .signin-page {
-  background: linear-gradient(180deg, rgba(100,100,100,1) 0%, rgba(43,43,43,1) 100%);
+  background: linear-gradient(180deg, rgb(1, 255, 137) 0%, rgba(43,43,43,1) 100%);
   color: white;
   height: 100vh;
   display: flex;

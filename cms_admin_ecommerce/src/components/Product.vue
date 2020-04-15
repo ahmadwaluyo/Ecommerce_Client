@@ -12,8 +12,8 @@
             <div class="d-flex">
               <p class="card-text mr-auto">Stock: {{ product.stock }}</p>
               <div class="d-flex">
-                <div @click="redirToEditPage(product.id)"><i class="mr-3 fas fa-pen-square fa-2x clickable-div"></i></div>
-                <div @click.prevent="deleteProduct(product.id)"><i class="fas fa-trash fa-2x clickable-div"></i></div>
+                <div @click="redirToEditPage(product.id)"><font-awesome-icon icon="pen-square" /><i class="mr-3 fas fa-pen-square fa-2x clickable-div redir"></i></div>
+                <div @click.prevent="deleteProduct(product.id)"><i class="fas fa-trash fa-2x clickable-div redir"></i></div>
               </div>
             </div>
           </div>
@@ -45,6 +45,10 @@ export default {
 </script>
 
 <style>
+.redir {
+  cursor: pointer;
+  color: blue;
+}
 .fa-mars {
   color: rgb(62, 83, 179);
 }

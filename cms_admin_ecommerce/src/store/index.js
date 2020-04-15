@@ -3,7 +3,8 @@ import Vuex from 'vuex'
 import axios from 'axios'
 
 Vue.use(Vuex)
-const baseURL = 'https://ecommercehacktiv8.herokuapp.com'
+// const baseURL = 'https://ecommercehacktiv8.herokuapp.com'
+const baseURL = 'http://localhost:3000'
 
 export default new Vuex.Store({
   state: {
@@ -51,7 +52,7 @@ export default new Vuex.Store({
     addProduct (context, payload) {
       return axios({
         method: 'post',
-        url: 'https://ecommercehacktiv8.herokuapp.com/products',
+        url: `${baseURL}/products`,
         headers: {
           token: localStorage.getItem('token')
         },
@@ -68,7 +69,7 @@ export default new Vuex.Store({
       context.commit('SET_ISLOADING', true)
       return axios({
         method: 'get',
-        url: `https://ecommercehacktiv8.herokuapp.com/products/${id}`,
+        url: `${baseURL}/products/${id}`,
         headers: {
           token: localStorage.getItem('token')
         }
@@ -77,7 +78,7 @@ export default new Vuex.Store({
     updateProduct (context, payload) {
       return axios({
         method: 'put',
-        url: `https://ecommercehacktiv8.herokuapp.com/products/${payload.id}`,
+        url: `${baseURL}/products/${payload.id}`,
         headers: {
           token: localStorage.getItem('token')
         },
@@ -93,7 +94,7 @@ export default new Vuex.Store({
     deleteProduct (context, id) {
       return axios({
         method: 'delete',
-        url: `https://ecommercehacktiv8.herokuapp.com/products/${id}`,
+        url: `${baseURL}/products/${id}`,
         headers: {
           token: localStorage.getItem('token')
         }
