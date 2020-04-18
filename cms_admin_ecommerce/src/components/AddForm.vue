@@ -1,5 +1,5 @@
 <template>
-  <div class="container form-space pt-5">
+  <div class="container-add pt-5">
     <form @submit.prevent="addProduct" class="mt-5">
     <h2 class="mb-2">Add New Product</h2>
     <div class="form-group">
@@ -59,7 +59,7 @@ export default {
       })
         .then(({ data }) => {
           this.$vToastify.success(data.name, 'Successfully added')
-          this.$router.push('/dashboard')
+          this.$router.push('/dashboard/products')
         })
         .catch(err => {
           for (let i = 0; i < err.response.data.message.length; i++) {
@@ -80,5 +80,12 @@ export default {
   justify-content: center;
   align-items: center;
   width: 50%;
+}
+.container-add {
+    display: flex;
+    justify-content: center;
+}
+.container-add form {
+  width: 40%;
 }
 </style>

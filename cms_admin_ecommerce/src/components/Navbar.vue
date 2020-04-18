@@ -8,7 +8,7 @@
         <li><router-link class="nav-item nav-link p-2 navbar-toggle" to="/dashboard/">Dashboard<span class="sr-only">(current)</span></router-link></li>
         <li><router-link class="nav-item nav-link p-2 navbar-toggle" to="/dashboard/products">All Product<span class="sr-only">(current)</span></router-link></li>
         <li><router-link class="nav-item nav-link p-2 navbar-toggle" to="/dashboard/add">Add New Product<span class="sr-only">(current)</span></router-link></li>
-        <li><router-link class="nav-item nav-link p-2 navbar-toggle" to="/dashboard/">Customers<span class="sr-only">(current)</span></router-link></li>
+        <li><router-link class="nav-item nav-link p-2 navbar-toggle" to="/dashboard/customers">Customers<span class="sr-only">(current)</span></router-link></li>
       </ul>
       <ul class="nav navbar-nav navbar-right logout">
         <li><a class="glyphicon glyphicon-log-out" @click="signOut"><span class="sr-only">(current)</span></a></li>

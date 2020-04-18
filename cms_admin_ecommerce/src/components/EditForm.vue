@@ -1,6 +1,6 @@
 <template>
-  <div class="container form-space pt-5">
-    <Loading v-if="isLoading" />
+  <div class="container-edit pt-5">
+    <Loading v-show="isLoading" />
     <form @submit.prevent="updateProduct" class="mt-5">
     <h2 class="mb-5">Edit Product</h2>
     <div class="form-group">
@@ -66,7 +66,7 @@ export default {
       })
         .then(({ data }) => {
           this.$vToastify.success(data.name, 'Successfully edited')
-          this.$router.push('/dashboard')
+          this.$router.push('/dashboard/products')
         })
         .catch(err => {
           for (let i = 0; i < err.response.data.message.length; i++) {
@@ -107,4 +107,11 @@ export default {
 </script>
 
 <style>
+  .container-edit {
+    display: flex;
+    justify-content: center;
+  }
+  .container-edit form {
+    width: 40%;
+  }
 </style>

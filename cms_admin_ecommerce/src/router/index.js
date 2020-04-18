@@ -4,6 +4,7 @@ import LoginPage from '../views/LoginPage.vue'
 import DashboardPage from '../views/DashboardPage.vue'
 import AllProduct from '../components/AllProduct.vue'
 import Dashboard from '../components/Dashboard.vue'
+import Customers from '../components/Customers.vue'
 import AddForm from '../components/AddForm.vue'
 import EditForm from '../components/EditForm.vue'
 
@@ -27,6 +28,11 @@ const routes = [
         path: '',
         component: Dashboard,
         name: 'Dashboard'
+      },
+      {
+        path: 'customers',
+        component: Customers,
+        name: 'Customers'
       },
       {
         path: 'products',

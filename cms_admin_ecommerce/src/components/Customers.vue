@@ -8,28 +8,11 @@
                     <a href="index.html" class="list-group-item active bg-main-color">
                         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
                     </a>
-                    <a></a>
-                    <router-link to="/dashboard/products" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Products <span class="sr-only">(current)</span><span class="badge">33</span></router-link>
-                    <router-link to="/dashboard/customers" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Customers <span class="sr-only">(current)</span><span class="badge">203</span></router-link>
+                    <a href="posts.html" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Products <span class="badge">33</span></a>
+                    <a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Customers <span class="badge">203</span></a>
                 </div>
             </div>
             <div class="col-md-9">
-                <div class="panel panel-default">
-                <div class="panel-heading bg-main-color">Website Overview</div>
-                    <div class="panel-body text-center">
-                    <div class="row">
-                        <div class="col-md-3 dash-box"><div class="well">
-                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <span class="badge">203</span> <h4>Customers</h4></div>
-                        </div>
-                        <div class="col-md-3 dash-box"><div class="well">
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> <span class="badge">33</span> <h4>Products</h4></div>
-                        </div>
-                        <div class="col-md-3 dash-box"><div class="well">
-                        <span class="glyphicon glyphicon-signal" aria-hidden="true"></span> <span class="badge">12,334</span> <h4>Visitors</h4></div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
                 <div class="panel panel-default">
                 <div class="panel-heading bg-main-color">Latest Users</div>
                     <div class="panel-body">
@@ -75,16 +58,10 @@
 
 <script>
 export default {
-  name: 'Dashboard'
+  name: 'Customers'
 }
 </script>
 
 <style>
-  .main {
-      padding: 0;
-      margin-top: 20px;
-      width: 100%;
-      height: 100%;
-    }
-  @import url(../assets/css/style.css);
+
 </style>
