@@ -27,7 +27,7 @@ export default new Vuex.Store({
     Login (context, payload) {
       return axios({
         method: 'post',
-        url: `${baseURL}/login`,
+        url: `${baseURL}/login/admin`,
         data: {
           email: payload.email,
           password: payload.password
