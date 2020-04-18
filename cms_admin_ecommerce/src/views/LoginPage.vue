@@ -1,10 +1,9 @@
 <template>
   <div class="login-page">
     <Loading v-if="isLoading" />
-    <div v-else>
       <form @submit.prevent="Login">
         <div class="d-flex flex-column">
-          <img src="../../public/camera-logo.png" style="width: 50px" alt="Logo">
+          <img src="../../public/camera-logo.png" style="width: 60px" alt="Logo">
         </div>
         <h2 class="mb-3">Admin Login</h2>
         <div class="form-group mt-5">
@@ -17,7 +16,6 @@
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
       </form>
-    </div>
   </div>
 </template>
 
@@ -69,5 +67,12 @@ export default {
   justify-content: center;
   text-align: center;
   align-items: center;
+}
+.login-page form {
+  width: 22%;
+  height: 50%;
+}
+.login-page form .btn{
+  width: 100%;
 }
 </style>
