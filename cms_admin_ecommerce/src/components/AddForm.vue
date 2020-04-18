@@ -1,7 +1,7 @@
 <template>
   <div class="container form-space pt-5">
     <form @submit.prevent="addProduct" class="mt-5">
-    <h2 class="mb-5">Add New Product</h2>
+    <h2 class="mb-2">Add New Product</h2>
     <div class="form-group">
       <label for="product-name">Name</label>
       <input v-model="name" type="text" class="form-control" id="product-name" aria-describedby="emailHelp" placeholder="ex: Onitsuka Tiger Black">

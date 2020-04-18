@@ -3,13 +3,15 @@ import App from './App.vue'
 import store from './store'
 import router from './router'
 import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import VueToastify from 'vue-toastify'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import '@fortawesome/fontawesome-free/css/all.css'
+import '@fortawesome/fontawesome-free/js/all.js'
 
-Vue.use(FontAwesomeIcon)
 Vue.use(VueToastify)
-
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
 Vue.config.productionTip = false
 
 new Vue({

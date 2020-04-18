@@ -1,0 +1,119 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
+@import url(bootstrap-gliphicon.css);
+
+.html, body {
+  background-color: #f5f6f7;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+.navbar-default {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, #130baa 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  border-color: #24deff;
+  padding: 10px;
+}
+.navbar-default .navbar-brand {
+  color: #cad8db;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ecdbff;
+}
+.navbar-default .navbar-text {
+  color: #cad8db;
+}
+.navbar-default .navbar-nav  {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #cad8db;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ecdbff;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #ecdbff;
+  background-color: rgb(2, 2, 83);
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ecdbff;
+  background-color: rgba(9,9,121,1);
+}
+.navbar-default .navbar-toggle {
+  border-color: #09005a;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: rgba(9,9,121,1);
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #cad8db;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #cad8db;
+}
+.navbar-default .navbar-link {
+  color: #cad8db;
+}
+.navbar-default .navbar-link:hover {
+  color: #ecdbff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #cad8db;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ecdbff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ecdbff;
+    background-color: #00ffea;
+  }
+}
+
+
+/* header */
+header {
+  padding-bottom: 10px
+}
+#dropdown {
+  margin-top: 5px;
+}
+/* background main color */
+.bg-main-color {
+  background: rgb(2,0,36);
+  color: #ffffff !important;
+}
+/* dash-box */
+.dash-box {
+  font-size: 2em;
+}
+/* panel */
+.panel-default {
+  border-width: 2px;
+}
+.panel-default .panel-heading {
+  background-color: rgb(2,0,36);
+}
+/* Footer */
+footer{
+  margin-top: 100px;
+}
+footer p{
+  padding-top: 40px;
+  padding-bottom: 30px;
+}

@@ -1,17 +1,20 @@
 <template>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <router-link class="navbar-brand" to="/dashboard"> <img src="../../public/camera-logo.png" alt="Logo" style="height: 2rem"> </router-link>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <router-link class="nav-item nav-link" to="/dashboard/">All Products<span class="sr-only">(current)</span></router-link>
-                <router-link class="nav-item nav-link" to="/dashboard/add">Add New Product<span class="sr-only">(current)</span></router-link>
-                <a class="nav-item nav-link" @click="signOut">Sign Out<span class="sr-only">(current)</span></a>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar navbar-default fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <router-link class="navbar-brand logo" to="/dashboard"> <img src="../../public/camera-logo.png" alt="Logo" style="height: 4rem"> Focusbelantara</router-link>
+      </div>
+      <ul class="nav navbar-nav font-weight-bold">
+        <li><router-link class="nav-item nav-link p-2 navbar-toggle" to="/dashboard/">Dashboard<span class="sr-only">(current)</span></router-link></li>
+        <li><router-link class="nav-item nav-link p-2 navbar-toggle" to="/dashboard/products">All Product<span class="sr-only">(current)</span></router-link></li>
+        <li><router-link class="nav-item nav-link p-2 navbar-toggle" to="/dashboard/add">Add New Product<span class="sr-only">(current)</span></router-link></li>
+        <li><router-link class="nav-item nav-link p-2 navbar-toggle" to="/dashboard/">Customers<span class="sr-only">(current)</span></router-link></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right logout">
+        <li><a class="glyphicon glyphicon-log-out" @click="signOut"><span class="sr-only">(current)</span></a></li>
+      </ul>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -35,7 +38,25 @@ export default {
 </script>
 
 <style>
+@import url(../assets/css/style.css);
 a {
   cursor: pointer;
+}
+.logout {
+  margin-top: 10px;
+  display: flex;
+  background-color: rgb(2,0,36);
+  border-radius: 100%;
+}
+.logout a {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 10px;
+  height: 5rem;
+  width: 5rem;
+}
+.logout:hover {
+  background-color: rgb(231, 16, 16);
 }
 </style>

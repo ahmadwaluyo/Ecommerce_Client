@@ -1,5 +1,9 @@
 <template>
   <div class="card col-12 col-lg-6 mb-3 mr-auto shadow-sm" style="max-width: 540px;">
+    <div class="d-flex flex-row-reverse cursor-pointer">
+      <div @click="redirToEditPage(product.id)"><i class="fa fa-pen-square m-1 cursor"></i></div>
+      <div @click.prevent="deleteProduct(product.id)"><i class="fa fa-trash m-1 cursor"></i></div>
+    </div>
       <div class="row no-gutters d-flex align-items-center">
         <div class="col-md-4">
           <img :src="`${product.image_url}`" class="card-img shoes-img mx-auto" alt="image">
@@ -11,10 +15,6 @@
             <p class="card-text">Category: {{ product.category }}
             <div class="d-flex">
               <p class="card-text mr-auto">Stock: {{ product.stock }}</p>
-              <div class="d-flex">
-                <div @click="redirToEditPage(product.id)"><font-awesome-icon icon="pen-square" /><i class="mr-3 fas fa-pen-square fa-2x clickable-div redir"></i></div>
-                <div @click.prevent="deleteProduct(product.id)"><i class="fas fa-trash fa-2x clickable-div redir"></i></div>
-              </div>
             </div>
           </div>
         </div>
@@ -45,6 +45,9 @@ export default {
 </script>
 
 <style>
+.cursor {
+  cursor: pointer;
+}
 .redir {
   cursor: pointer;
   color: blue;
