@@ -9,8 +9,8 @@
                         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
                     </a>
                     <a></a>
-                    <router-link to="/dashboard/products" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Products <span class="sr-only">(current)</span><span class="badge">33</span></router-link>
-                    <router-link to="/dashboard/customers" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Customers <span class="sr-only">(current)</span><span class="badge">203</span></router-link>
+                    <router-link to="/dashboard/products" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Products <span class="sr-only">(current)</span><span class="badge">{{ products.length }}</span></router-link>
+                    <router-link to="/dashboard/customers" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Customers <span class="sr-only">(current)</span><span class="badge">{{ customers.length }}</span></router-link>
                 </div>
             </div>
             <div class="col-md-9">
@@ -19,10 +19,10 @@
                     <div class="panel-body text-center">
                     <div class="row">
                         <div class="col-md-3 dash-box"><div class="well">
-                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <span class="badge">203</span> <h4>Customers</h4></div>
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <span class="badge">{{ customers.length }}</span> <h4>Customers</h4></div>
                         </div>
                         <div class="col-md-3 dash-box"><div class="well">
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> <span class="badge">33</span> <h4>Products</h4></div>
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> <span class="badge">{{ products.length }}</span> <h4>Products</h4></div>
                         </div>
                         <div class="col-md-3 dash-box"><div class="well">
                         <span class="glyphicon glyphicon-signal" aria-hidden="true"></span> <span class="badge">12,334</span> <h4>Visitors</h4></div>
@@ -64,10 +64,14 @@ export default {
   computed: {
     customers: function () {
       return this.$store.state.customers
+    },
+    products: function () {
+      return this.$store.state.products
     }
   },
   created () {
     this.$store.dispatch('fetchUsers')
+    this.$store.dispatch('fetchProducts')
   }
 }
 </script>

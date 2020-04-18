@@ -10,7 +10,7 @@
                     </a>
                     <a></a>
                     <router-link to="/dashboard" class="list-group-item"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home <span class="sr-only">(current)</span></router-link>
-                    <router-link to="/dashboard/products" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Products <span class="sr-only">(current)</span><span class="badge">33</span></router-link>
+                    <router-link to="/dashboard/products" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Products <span class="sr-only">(current)</span><span class="badge">{{ products.length }}</span></router-link>
                 </div>
             </div>
             <div class="col-md-9">
@@ -48,10 +48,14 @@ export default {
   computed: {
     customers: function () {
       return this.$store.state.customers
+    },
+    products: function () {
+      return this.$store.state.products
     }
   },
   created () {
     this.$store.dispatch('fetchUsers')
+    this.$store.dispatch('fetchProducts')
   }
 }
 </script>
