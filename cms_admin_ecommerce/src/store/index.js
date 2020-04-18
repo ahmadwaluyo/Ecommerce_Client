@@ -107,6 +107,12 @@ export default new Vuex.Store({
         }
       })
     },
+    deleteUser (context, id) {
+      return axios({
+        method: 'delete',
+        url: `${baseURL}/${id}`
+      })
+    },
     deleteProduct (context, id) {
       return axios({
         method: 'delete',
