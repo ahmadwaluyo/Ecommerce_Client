@@ -33,12 +33,13 @@
                 <div class="panel panel-default">
                 <div class="panel-heading bg-main-color">Latest Users</div>
                     <div class="panel-body">
-                    <table class="table table-striped table-hover">
+                    <table class="table table-striped table-hover table-bordered">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Joined</th>
+                                <th class="act">Name</th>
+                                <th class="act">Email</th>
+                                <th class="act">Joined</th>
+                                <th class="act">Action</th>
                             </tr>
                         </thead>
                             <tbody>
@@ -82,6 +83,9 @@ export default {
       margin-top: 20px;
       width: 100%;
       height: 100%;
+    }
+  .table, .act {
+      text-align: center;
     }
   @import url(../assets/css/style.css);
 </style>
