@@ -8,8 +8,9 @@
                     <a href="index.html" class="list-group-item active bg-main-color">
                         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
                     </a>
-                    <a href="posts.html" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Products <span class="badge">33</span></a>
-                    <a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Customers <span class="badge">203</span></a>
+                    <a></a>
+                    <router-link to="/dashboard" class="list-group-item"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home <span class="sr-only">(current)</span></router-link>
+                    <router-link to="/dashboard/products" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Products <span class="sr-only">(current)</span><span class="badge">33</span></router-link>
                 </div>
             </div>
             <div class="col-md-9">

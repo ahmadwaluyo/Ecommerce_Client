@@ -31,7 +31,7 @@
     </div>
     <div class="d-flex justify-content-between">
       <button type="submit" class="btn btn-primary">Save Changes</button>
-      <button @click="redirToDashboard" class="btn btn-danger">Cancel</button>
+      <button @click="redirToProducts" class="btn btn-danger">Cancel</button>
     </div>
   </form>
   </div>
@@ -77,8 +77,8 @@ export default {
           this.$store.commit('SET_ISLOADING', false)
         })
     },
-    redirToDashboard: function () {
-      this.$router.push('/dashboard')
+    redirToProducts: function () {
+      this.$router.push('/dashboard/products')
     }
   },
   created () {
