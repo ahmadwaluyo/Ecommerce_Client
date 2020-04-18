@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    <Loading v-if="isLoading" />
     <section id="main">
         <div class="container">
         <div class="row">
@@ -56,11 +57,13 @@
 </template>
 
 <script>
+import Loading from './Loading'
 import CustomerUser from './CustomerUser'
 export default {
   name: 'Dashboard',
   components: {
-    CustomerUser
+    CustomerUser,
+    Loading
   },
   computed: {
     customers: function () {
@@ -68,6 +71,9 @@ export default {
     },
     products: function () {
       return this.$store.state.products
+    },
+    isLoading: function () {
+      return this.$store.state.isLoading
     }
   },
   created () {

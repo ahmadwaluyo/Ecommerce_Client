@@ -24,7 +24,8 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    Login (context, payload) {
+    Login ({ commit }, payload) {
+      commit('SET_ISLOADING', true)
       return axios({
         method: 'post',
         url: `${baseURL}/login/admin`,
@@ -46,8 +47,8 @@ export default new Vuex.Store({
           this.$vToastify.error(err.response.data, 'Error Fetching Data')
         })
     },
-    fetchProducts (context, payload) {
-      context.commit('SET_ISLOADING', true)
+    fetchProducts ({ commit }, payload) {
+      commit('SET_ISLOADING', true)
       axios({
         method: 'get',
         url: `${baseURL}/products`,
@@ -56,16 +57,17 @@ export default new Vuex.Store({
         }
       })
         .then(({ data }) => {
-          context.commit('SET_PRODUCTS', data)
+          commit('SET_PRODUCTS', data)
         })
         .catch(err => {
           this.$vToastify.error(err.response.data, 'Error Fetching Data')
         })
         .finally(_ => {
-          context.commit('SET_ISLOADING', false)
+          commit('SET_ISLOADING', false)
         })
     },
-    addProduct (context, payload) {
+    addProduct ({ commit }, payload) {
+      commit('SET_ISLOADING', true)
       return axios({
         method: 'post',
         url: `${baseURL}/products`,
@@ -81,8 +83,8 @@ export default new Vuex.Store({
         }
       })
     },
-    getProductById (context, id) {
-      context.commit('SET_ISLOADING', true)
+    getProductById ({ commit }, id) {
+      commit('SET_ISLOADING', true)
       return axios({
         method: 'get',
         url: `${baseURL}/products/${id}`,
@@ -91,7 +93,8 @@ export default new Vuex.Store({
         }
       })
     },
-    updateProduct (context, payload) {
+    updateProduct ({ commit }, payload) {
+      commit('SET_ISLOADING', true)
       return axios({
         method: 'put',
         url: `${baseURL}/products/${payload.id}`,
@@ -107,13 +110,15 @@ export default new Vuex.Store({
         }
       })
     },
-    deleteUser (context, id) {
+    deleteUser ({ commit }, id) {
+      commit('SET_ISLOADING', true)
       return axios({
         method: 'delete',
         url: `${baseURL}/${id}`
       })
     },
-    deleteProduct (context, id) {
+    deleteProduct ({ commit }, id) {
+      commit('SET_ISLOADING', true)
       return axios({
         method: 'delete',
         url: `${baseURL}/products/${id}`,

@@ -1,21 +1,23 @@
 <template>
   <div class="login-page">
-    <Loading v-show="isLoading" />
-    <form @submit.prevent="Login">
-      <div class="d-flex flex-column">
-        <img src="../../public/camera-logo.png" style="width: 50px" alt="Logo">
-      </div>
-      <h2 class="mb-3">Admin Login</h2>
-    <div class="form-group mt-5">
-      <label for="exampleInputEmail1">Email address</label>
-      <input v-model="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="admin@gmail.com">
+    <Loading v-if="isLoading" />
+    <div v-else>
+      <form @submit.prevent="Login">
+        <div class="d-flex flex-column">
+          <img src="../../public/camera-logo.png" style="width: 50px" alt="Logo">
+        </div>
+        <h2 class="mb-3">Admin Login</h2>
+        <div class="form-group mt-5">
+          <label for="exampleInputEmail1">Email address</label>
+          <input v-model="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="admin@gmail.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input v-model="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="123123">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
     </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input v-model="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="123123">
-    </div>
-    <button type="submit" class="btn btn-primary">Login</button>
-  </form>
   </div>
 </template>
 

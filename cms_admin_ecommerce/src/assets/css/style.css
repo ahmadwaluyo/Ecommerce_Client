@@ -9,8 +9,8 @@
 }
 .navbar-default {
   background: rgb(2,0,36);
-  background: linear-gradient(90deg, #130baa 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-  border-color: #24deff;
+  /* background: linear-gradient(90deg, #130baa 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+  box-shadow: #7804fd;
   padding: 10px;
 }
 .navbar-default .navbar-brand {

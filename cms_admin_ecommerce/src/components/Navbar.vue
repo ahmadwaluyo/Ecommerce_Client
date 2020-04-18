@@ -1,14 +1,14 @@
 <template>
-  <nav class="navbar navbar-default fixed-top">
+  <nav class="navbar navbar-default fixed-top hoverable">
     <div class="container">
       <div class="navbar-header">
         <router-link class="navbar-brand logo" to="/dashboard"> <img src="../../public/camera-logo.png" alt="Logo" style="height: 4rem"> Focusbelantara</router-link>
       </div>
       <ul class="nav navbar-nav font-weight-bold">
-        <li><router-link class="nav-item nav-link p-2 navbar-toggle" to="/dashboard/">Dashboard<span class="sr-only">(current)</span></router-link></li>
-        <li><router-link class="nav-item nav-link p-2 navbar-toggle" to="/dashboard/products">All Product<span class="sr-only">(current)</span></router-link></li>
-        <li><router-link class="nav-item nav-link p-2 navbar-toggle" to="/dashboard/add">Add New Product<span class="sr-only">(current)</span></router-link></li>
-        <li><router-link class="nav-item nav-link p-2 navbar-toggle" to="/dashboard/customers">Customers<span class="sr-only">(current)</span></router-link></li>
+        <li><router-link class="nav-item nav-link route" to="/dashboard/">Dashboard<span class="sr-only">(current)</span></router-link></li>
+        <li><router-link class="nav-item nav-link route" to="/dashboard/products">All Product<span class="sr-only">(current)</span></router-link></li>
+        <li><router-link class="nav-item nav-link route" to="/dashboard/add">Add New Product<span class="sr-only">(current)</span></router-link></li>
+        <li><router-link class="nav-item nav-link route" to="/dashboard/customers">Customers<span class="sr-only">(current)</span></router-link></li>
       </ul>
       <ul class="nav navbar-nav navbar-right logout">
         <li><a class="glyphicon glyphicon-log-out" @click="signOut"><span class="sr-only">(current)</span></a></li>
@@ -41,6 +41,12 @@ export default {
 @import url(../assets/css/style.css);
 a {
   cursor: pointer;
+}
+.route {
+  margin-top: 10px;
+}
+.route:hover {
+  background-color: rgb(6, 63, 250) !important;
 }
 .logout {
   margin-top: 10px;
