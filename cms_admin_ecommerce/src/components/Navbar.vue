@@ -23,7 +23,7 @@ export default {
   methods: {
     signOut: function () {
       this.$vToastify.prompt({
-        body: 'Are you sure you want to sign out?',
+        body: 'Are you sure you want to Logout?',
         answers: { Yes: true, No: false }
       })
         .then(value => {

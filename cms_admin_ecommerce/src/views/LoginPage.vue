@@ -1,12 +1,12 @@
 <template>
-  <div class="signin-page">
-    <Loading v-if="isLoading" />
-    <form @submit.prevent="signIn">
-      <div class="d-flex flex-column align-items-center">
-        <img src="../../public/camera-logo.png" style="width: 50px" class="mb-3" alt="Logo">
-        <h2>Sign In As Admin</h2>
+  <div class="login-page">
+    <Loading v-show="isLoading" />
+    <form @submit.prevent="Login">
+      <div class="d-flex flex-column">
+        <img src="../../public/camera-logo.png" style="width: 50px" alt="Logo">
       </div>
-    <div class="form-group mt-3">
+      <h2 class="mb-3">Admin Login</h2>
+    <div class="form-group mt-5">
       <label for="exampleInputEmail1">Email address</label>
       <input v-model="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="admin@gmail.com">
     </div>
@@ -14,7 +14,7 @@
       <label for="exampleInputPassword1">Password</label>
       <input v-model="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="123123">
     </div>
-    <button type="submit" class="btn btn-primary">Sign In</button>
+    <button type="submit" class="btn btn-primary">Login</button>
   </form>
   </div>
 </template>
@@ -33,11 +33,11 @@ export default {
     }
   },
   methods: {
-    signIn: function () {
+    Login: function () {
       this.$store.commit('SET_ISLOADING', true)
-      this.$store.dispatch('signIn', { email: this.email, password: this.password })
+      this.$store.dispatch('Login', { email: this.email, password: this.password })
         .then(({ data }) => {
-          this.$vToastify.success('Successfully Signed In', 'Hello, Admin!')
+          this.$vToastify.success('Successfully Login', 'Hello, Admin!')
           localStorage.setItem('token', data.token)
           this.$router.push('/dashboard')
         })
@@ -58,13 +58,14 @@ export default {
 </script>
 
 <style>
-.signin-page {
+.login-page {
   background: linear-gradient(180deg, rgb(25, 218, 252) 0%, rgba(43,43,43,1) 100%);
   background-size: cover;
   color: white;
   height: 100vh;
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: center;
 }
 </style>

@@ -13,6 +13,7 @@ export default {
     Navbar
   },
   created () {
+    this.$store.dispatch('fetchUsers')
     this.$store.dispatch('fetchProducts')
   }
 }

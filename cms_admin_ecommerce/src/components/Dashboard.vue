@@ -42,26 +42,7 @@
                             </tr>
                         </thead>
                             <tbody>
-                                <tr>
-                                    <td>Eve Jackson</td>
-                                    <td>evejackson@gmail.com</td>
-                                    <td>Dec 13, 2016</td>
-                                </tr>
-                                <tr>
-                                    <td>John Doe</td>
-                                    <td>johndoe@gmail.com</td>
-                                    <td>Dec 14, 2016</td>
-                                </tr>
-                                <tr>
-                                    <td>Stephanie Landon</td>
-                                    <td>landon@gmail.com</td>
-                                    <td>Dec 15, 2016</td>
-                                </tr>
-                                <tr>
-                                    <td>Mike Johnson</td>
-                                    <td>mikejohnson@gmail.com</td>
-                                    <td>Dec 16, 2016</td>
-                                </tr>
+                                <CustomerUser v-for="customer in customers" :key="customer.id" :customer="customer"/>
                             </tbody>
                         </table>
                     </div>
@@ -74,8 +55,20 @@
 </template>
 
 <script>
+import CustomerUser from './CustomerUser'
 export default {
-  name: 'Dashboard'
+  name: 'Dashboard',
+  components: {
+    CustomerUser
+  },
+  computed: {
+    customers: function () {
+      return this.$store.state.customers
+    }
+  },
+  created () {
+    this.$store.dispatch('fetchUsers')
+  }
 }
 </script>
 

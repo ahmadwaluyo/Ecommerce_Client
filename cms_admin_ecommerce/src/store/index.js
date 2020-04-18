@@ -3,24 +3,28 @@ import Vuex from 'vuex'
 import axios from 'axios'
 
 Vue.use(Vuex)
-const baseURL = 'https://ecommercehacktiv8.herokuapp.com'
-// const baseURL = 'http://localhost:3000'
+// const baseURL = 'https://ecommercehacktiv8.herokuapp.com'
+const baseURL = 'http://localhost:3000'
 
 export default new Vuex.Store({
   state: {
     products: [],
+    customers: [],
     isLoading: false
   },
   mutations: {
     SET_PRODUCTS (state, payload) {
       state.products = payload
     },
+    SET_USERS (state, payload) {
+      state.customers = payload
+    },
     SET_ISLOADING (state, payload) {
       state.isLoading = payload
     }
   },
   actions: {
-    signIn (context, payload) {
+    Login (context, payload) {
       return axios({
         method: 'post',
         url: `${baseURL}/login`,
@@ -29,6 +33,18 @@ export default new Vuex.Store({
           password: payload.password
         }
       })
+    },
+    fetchUsers (context, payload) {
+      axios({
+        method: 'get',
+        url: `${baseURL}/`
+      })
+        .then(({ data }) => {
+          context.commit('SET_USERS', data)
+        })
+        .catch(err => {
+          this.$vToastify.error(err.response.data, 'Error Fetching Data')
+        })
     },
     fetchProducts (context, payload) {
       context.commit('SET_ISLOADING', true)
