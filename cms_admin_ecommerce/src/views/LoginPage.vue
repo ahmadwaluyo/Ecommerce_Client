@@ -59,8 +59,8 @@ export default {
 
 <style>
 .login-page {
-  /* background: linear-gradient(180deg, rgb(25, 218, 252) 0%, rgba(43,43,43,1) 100%); */
-  background: linear-gradient(180deg, #84a9ac 0%, #3b6978 100%);
+  background: linear-gradient(180deg, rgb(25, 218, 252) 0%, rgba(43,43,43,1) 100%);
+  /* background: linear-gradient(180deg, #84a9ac 0%, #3b6978 100%); */
   background-size: cover;
   color: white;
   height: 100vh;
