@@ -57,7 +57,7 @@
 import Loading from './Loading'
 import CustomerUser from './CustomerUser'
 export default {
-  name: 'Dashboard',
+  name: 'DashboardChild',
   components: {
     CustomerUser,
     Loading

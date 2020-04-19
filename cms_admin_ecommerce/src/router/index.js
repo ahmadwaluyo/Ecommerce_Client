@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import LoginPage from '../views/LoginPage.vue'
 import DashboardPage from '../views/DashboardPage.vue'
 import AllProduct from '../components/AllProduct.vue'
-import Dashboard from '../components/Dashboard.vue'
+import DashboardChild from '../components/Dashboard.vue'
 import Customers from '../components/Customers.vue'
 import AddForm from '../components/AddForm.vue'
 import EditForm from '../components/EditForm.vue'
@@ -26,8 +26,8 @@ const routes = [
     children: [
       {
         path: '',
-        component: Dashboard,
-        name: 'Dashboard'
+        component: DashboardChild,
+        name: 'DashboardChild'
       },
       {
         path: 'customers',

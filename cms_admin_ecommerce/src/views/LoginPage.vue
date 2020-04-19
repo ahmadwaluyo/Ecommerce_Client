@@ -53,6 +53,11 @@ export default {
     isLoading: function () {
       return this.$store.state.isLoading
     }
+  },
+  created () {
+    if (localStorage.token) {
+      this.$router.push('/dashboard')
+    }
   }
 }
 </script>
