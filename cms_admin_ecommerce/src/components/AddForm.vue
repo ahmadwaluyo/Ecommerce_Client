@@ -4,19 +4,19 @@
         <h2 class="mb-2">Add New Product</h2>
         <div class="form-group">
           <label for="product-name">Name</label>
-          <input v-model="name" type="text" class="form-control" id="product-name" aria-describedby="emailHelp" placeholder="ex: Onitsuka Tiger Black">
+          <input v-model="name" type="text" class="form-control" id="product-name" aria-describedby="emailHelp" placeholder="ex: Onitsuka Tiger Black" required>
         </div>
         <div class="form-group">
           <label for="product-price">Price</label>
-          <input v-model="price" type="text" class="form-control" id="product-price" placeholder="ex: 650000">
+          <input v-model="price" type="text" class="form-control" id="product-price" placeholder="ex: 650000" required>
         </div>
         <div class="form-group">
           <label for="product-stock">Stock</label>
-          <input v-model="stock" type="text" class="form-control" id="product-stock" placeholder="ex: 50">
+          <input v-model="stock" type="text" class="form-control" id="product-stock" placeholder="ex: 50" required>
         </div>
         <div class="form-group">
           <label for="product-category">Category</label>
-          <select v-model="category" class="form-control" id="product-category">
+          <select v-model="category" class="form-control" id="product-category" required>
             <option disabled value="">Merk</option>
             <option>Fujifilm</option>
             <option>Canon</option>
@@ -27,7 +27,7 @@
         </div>
         <div class="form-group">
           <label for="product-image">Image</label>
-          <input v-model="image_url" type="text" class="form-control" id="product-image" placeholder="Place your image url here">
+          <input v-model="image_url" type="text" class="form-control" id="product-image" placeholder="Place your image url here" required>
           <small class="form-text text-muted">Square and centered images are recommended</small>
         </div>
         <button type="submit" class="btn btn-primary">Add</button>
@@ -62,8 +62,8 @@ export default {
           this.$router.push('/dashboard/products')
         })
         .catch(err => {
-          for (let i = 0; i < err.response.data.message.length; i++) {
-            this.$vToastify.error(err.response.data.message[i], 'Oops')
+          for (let i = 0; i < err.response.data.errors.length; i++) {
+            this.$vToastify.error(err.response.data.errors[i].message, 'Oops')
           }
         })
         .finally(_ => {

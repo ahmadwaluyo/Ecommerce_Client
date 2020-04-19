@@ -69,8 +69,9 @@ export default {
           this.$router.push('/dashboard/products')
         })
         .catch(err => {
-          for (let i = 0; i < err.response.data.message.length; i++) {
-            this.$vToastify.error(err.response.data.message[i], 'Oops')
+          console.log(err.response.data)
+          for (let i = 0; i < err.response.data.errors.length; i++) {
+            this.$vToastify.error(err.response.data.errors[i].message, 'Oops')
           }
         })
         .finally(_ => {
