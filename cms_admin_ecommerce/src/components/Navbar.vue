@@ -46,12 +46,12 @@ a {
   margin-top: 10px;
 }
 .route:hover {
-  background-color: rgb(6, 63, 250) !important;
+  background-color: #3b6978 !important;
 }
 .logout {
   margin-top: 10px;
   display: flex;
-  background-color: rgb(2,0,36);
+  background-color: #204051;
   border-radius: 100%;
 }
 .logout a {
@@ -63,6 +63,6 @@ a {
   width: 5rem;
 }
 .logout:hover {
-  background-color: rgb(231, 16, 16);
+  background-color: #3b6978;
 }
 </style>

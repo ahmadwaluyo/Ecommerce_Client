@@ -6,10 +6,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="list-group">
-                    <a href="index.html" class="list-group-item active bg-main-color">
-                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
-                    </a>
-                    <a></a>
+                  <router-link to="/dashboard" class="list-group-item bg-main-color active"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard <span class="sr-only">(current)</span></router-link>
                     <router-link to="/dashboard/products" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Products <span class="sr-only">(current)</span><span class="badge">{{ products.length }}</span></router-link>
                     <router-link to="/dashboard/customers" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Customers <span class="sr-only">(current)</span><span class="badge">{{ customers.length }}</span></router-link>
                 </div>

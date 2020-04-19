@@ -46,6 +46,7 @@ export default {
 
 <style>
 .box-product {
+  background-color: #ffffff;
   max-width: 540px;
   height: 200px;
   margin: 10px;

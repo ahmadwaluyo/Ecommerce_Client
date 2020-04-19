@@ -2,15 +2,14 @@
 @import url(bootstrap-gliphicon.css);
 
 .html, body {
-  background-color: #ffffff;
+  background-color: #eff0f7;
   padding: 0;
   margin: 0;
   font-size: 14px;
 }
 .navbar-default {
-  background: rgb(2,0,36);
-  /* background: linear-gradient(90deg, #130baa 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
-  box-shadow: #7804fd;
+  background: #204051;
+  /* backgrou#00ffeand: linear-gradient(90deg, #130baa 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
   padding: 10px;
 }
 .navbar-default .navbar-brand {
@@ -81,7 +80,7 @@
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #ecdbff;
-    background-color: #00ffea;
+    background-color: #84a9ac;
   }
 }
 
@@ -95,7 +94,7 @@ header {
 }
 /* background main color */
 .bg-main-color {
-  background: rgb(2,0,36);
+  background: #204051;
   color: #ffffff !important;
 }
 /* dash-box */
@@ -107,7 +106,7 @@ header {
   border-width: 2px;
 }
 .panel-default .panel-heading {
-  background-color: rgb(2,0,36);
+  background-color: #204051;
 }
 /* Footer */
 footer{
